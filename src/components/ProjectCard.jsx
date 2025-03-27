@@ -17,12 +17,15 @@ export default function ProjectCard({ project }) {
       initial={{ scale: 0.7, opacity: 0.6 }}
       viewport={{ once: false, amount: 0.8 }} // Triggers when 30% of the div is visible
       animate={
-        inView ? { scale: 1.1, opacity: 1 } : { scale: 0.8, opacity: 0.6 }
+        inView ? { scale: 1.05, opacity: 1 } : { scale: 0.8, opacity: 0.6 }
       }
       transition={{ type: "spring", stiffness: 150, damping: 15 }}
     >
-      <div ref={ref} className="flex flex-col gap-5 p-8 lg:w-150 ">
-        <h1 className="text-3xl font-semibold">{title}</h1>
+      <div
+        ref={ref}
+        className="flex flex-col gap-5 p-4 lg:p-8 w-full lg:w-150 "
+      >
+        <h1 className="text-xl font-semibold">{title}</h1>
         <div className="flex items-center gap-1">
           <span className="font-bold  text-neutral-600">Made with :</span>{" "}
           {tech.map((t, index) => {
