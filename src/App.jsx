@@ -24,7 +24,7 @@ export default function App() {
     });
   };
   return (
-    <div className="relative flex flex-col gap-5 sm:gap-10 lg:gap-15">
+    <div className="relative flex flex-col items-center justify-center gap-5 sm:gap-10 lg:gap-15  overflow-hidden">
       <div className="absolute top-0 bg-neutral-50 h-200" />
       <NavBar scrollToSection={scrollToSection} />
       <About ref={sectionRefs.about} />

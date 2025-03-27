@@ -5,7 +5,7 @@ const About = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="bg-neutral-900 h-150 pt-40 sm:pt-50 flex flex-col items-center text-center"
+      className="bg-neutral-900 h-150 w-full pt-40 sm:pt-50 flex flex-col items-center text-center"
     >
       <h1 className="text-white mb-5  text-4xl sm:text-6xl lg:text-7xl font-bold">
         Baldwin-sudo's Portfolio
