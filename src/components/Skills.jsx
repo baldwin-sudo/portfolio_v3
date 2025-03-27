@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
+import React, { forwardRef } from "react";
 import { motion, useInView } from "framer-motion";
 import StackIcon from "tech-stack-icons";
 
-export default function Skills() {
+const Skills = forwardRef((props, ref) => {
   const skills = [
     "html5",
     "css3",
@@ -25,8 +25,7 @@ export default function Skills() {
     "docker",
   ];
 
-  const containerRef = useRef(null);
-  const isInView = useInView(containerRef, {
+  const isInView = useInView(ref, {
     once: false,
     amount: 0.1, // Trigger when 10% of the section is in view
   });
@@ -58,8 +57,8 @@ export default function Skills() {
   };
 
   return (
-    <div ref={containerRef} className="max-w-250 mx-auto">
-      <h1 className="text-3xl xl:text-5xl text-center mb-5">My Skills</h1>
+    <div ref={ref} className="max-w-250 mx-auto scroll-mt-30">
+      <h1 className="text-center text-3xl sm:text-5xl mb-5">My Skills</h1>
       <motion.div
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -68,7 +67,7 @@ export default function Skills() {
       >
         {skills.map((skill, index) => (
           <motion.div
-            key={skill}
+            key={index}
             variants={itemVariants}
             className="flex flex-col items-center justify-center gap-1.5"
           >
@@ -79,4 +78,5 @@ export default function Skills() {
       </motion.div>
     </div>
   );
-}
+});
+export default Skills;

@@ -1,20 +1,19 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
 
-export default function NavBar() {
-  const menuItems = [
-    { name: "About" },
-    { name: "Projects" },
-    { name: "Experience" },
-    { name: "Skills" },
-    { name: "Education" },
-  ];
+export default function NavBar({ scrollToSection }) {
+  const menuItems = ["about", "projects", "experience", "skills", "education"];
+
   const [bubleDimensions, setBubleDimensions] = useState({
     top: 0,
     left: 0,
     width: 0,
     height: 0,
   });
+  const [currentMenuItem, setCurrentMenuItem] = useState("");
+  useEffect(() => {
+    scrollToSection(currentMenuItem);
+  }, [currentMenuItem, scrollToSection]);
   const menuItemsRefs = useRef([]);
   const onClick = (e, index) => {
     e.preventDefault();
@@ -30,7 +29,7 @@ export default function NavBar() {
     });
   };
   return (
-    <div className="bg-white/75  backdrop-blur-3xl fixed top-0 left-1/2 -translate-x-1/2 sm:m-5 flex flex-wrap  items-center justify-center  sm:rounded-full sm:w-fit w-full sm:flex-nowrap gap-1 sm:gap-8 py-4 px-15 sm:px-4     sm:shadow-lg">
+    <div className="z-10 bg-white/75  backdrop-blur-3xl fixed top-0 left-1/2 -translate-x-1/2 sm:m-5 flex flex-wrap  items-center justify-center  sm:rounded-full sm:w-fit w-full sm:flex-nowrap gap-1 sm:gap-8 py-4 px-15 sm:px-4     sm:shadow-lg">
       <motion.div
         className=" bg-neutral-200 rounded-full "
         // Animate when this value changes:
@@ -54,10 +53,13 @@ export default function NavBar() {
             ref={(el) => {
               menuItemsRefs.current[index] = el;
             }}
-            onClick={(e) => onClick(e, index)}
+            onClick={(e) => {
+              onClick(e, index);
+              setCurrentMenuItem(item);
+            }}
             className="text-neutral-600 hover:text-neutral-950  rounded-full px-3 py-1.5"
           >
-            {item.name}
+            {item}
           </button>
         );
       })}

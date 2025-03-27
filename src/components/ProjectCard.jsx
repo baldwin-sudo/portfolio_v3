@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useRef } from "react";
 import githubIco from "../assets/github-icon.png";
 import linkIco from "../assets//link-icon.png";
 import StackIcon from "tech-stack-icons";
-import { p } from "framer-motion/client";
+import { motion, useInView } from "framer-motion";
 
 export default function ProjectCard({ project }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, {
+    triggerOnce: false,
+    threshold: 0.8,
+  });
   const { title, tech, github, demo, description, img } = project;
   return (
-    <div className="bg-neutral-50 hover:bg-neutral-200 border-1 border-neutral-200  flex gap-3 w-fit  max-w-250 rounded-lg p-8 ">
-      <div className="flex flex-col gap-5">
+    <motion.div
+      className="bg-neutral-50 hover:bg-neutral-200 border-1 border-neutral-200  flex  w-fit lg:w-225 xl:w-250 rounded-lg  "
+      initial={{ scale: 0.7, opacity: 0.6 }}
+      viewport={{ once: false, amount: 0.8 }} // Triggers when 30% of the div is visible
+      animate={
+        inView ? { scale: 1.1, opacity: 1 } : { scale: 0.8, opacity: 0.6 }
+      }
+      transition={{ type: "spring", stiffness: 150, damping: 15 }}
+    >
+      <div ref={ref} className="flex flex-col gap-5 p-8 lg:w-150 ">
         <h1 className="text-3xl font-semibold">{title}</h1>
         <div className="flex items-center gap-1">
           <span className="font-bold  text-neutral-600">Made with :</span>{" "}
@@ -32,22 +45,25 @@ export default function ProjectCard({ project }) {
             </button>
           )}
           {demo && (
-            <button className="w-30 lg:w-35  flex  items-center justify-center gap-1  rounded-full px-4 sm:px-6 py-3 bg-neutral-900 hover:opacity-80 text-white text-lg sm:text-xl cursor-pointer ">
+            <a
+              href={demo}
+              className="w-30 lg:w-35  flex  items-center justify-center gap-1  rounded-full px-4 sm:px-6 py-3 bg-neutral-900 hover:opacity-80 text-white text-lg sm:text-xl cursor-pointer "
+            >
               <img className="w-6 h-6" src={linkIco} alt="" />
-              <a href={demo}>Live</a>
-            </button>
+              <p>Live</p>
+            </a>
           )}
         </div>
       </div>{" "}
-      <div className="flex items-center">
-        {img != null ? (
+      {img != null ? (
+        <div className="relative self-end   lg:w-250 xl:w-300 h-0 lg:h-70 xl:h-80 overflow-clip ">
           <img
             src={img}
             alt="project img"
-            className="hidden lg:block w-140 h-50 border-2 border-neutral-300 "
+            className="hidden absolute -right-5 bottom-0  lg:block lg:h-70 xl:h-80 w-350    rounded-md  border-1 border-b-0 border-neutral-300 "
           />
-        ) : null}
-      </div>
-    </div>
+        </div>
+      ) : null}
+    </motion.div>
   );
 }

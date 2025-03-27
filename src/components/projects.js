@@ -9,15 +9,7 @@ const projects = [
     demo: "https://eluxury.netlify.app/",
     github: "https://github.com/baldwin-sudo/eluxury",
   },
-  {
-    title: "Custom Deep learning Framework",
-    tech: ["python", "pytorch", "rust"],
-    img: null,
-    description:
-      "I made my own Deep learning framework ,inspired by the design of Pytorch's.Implemented Firstly using Python ,and Secondly a minimal version using Rust.",
-    demo: null,
-    github: "https://github.com/baldwin-sudo/deep-learning-framework",
-  },
+
   {
     title: "PassKeeper",
     tech: ["reactjs", "go", "sqlite3"],
@@ -35,6 +27,15 @@ const projects = [
       "An AI-powered chatbot with memory and history, built using LangChain and Streamlit. Just upload your PDFs—Lama will parse them, Elasticsearch will index the content, and OpenAI will deliver smart, context-aware responses.",
     demo: null,
     github: "https://github.com/baldwin-sudo/baldwin-templates",
+  },
+  {
+    title: "Custom Deep learning Framework",
+    tech: ["python", "pytorch", "rust"],
+    img: null,
+    description:
+      "I made my own Deep learning framework ,inspired by the design of Pytorch's.Implemented Firstly using Python ,and Secondly a minimal version using Rust.",
+    demo: null,
+    github: "https://github.com/baldwin-sudo/deep-learning-framework",
   },
 ];
 export default projects;

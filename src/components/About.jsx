@@ -1,23 +1,28 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import githubIco from "../assets/github-icon.png";
 import linkdedinIco from "../assets/linkedin-icon.png";
-export default function About() {
+const About = forwardRef((props, ref) => {
   return (
-    <div className="bg-neutral-900 h-150 pt-40 sm:pt-50 flex flex-col items-center text-center">
+    <div
+      ref={ref}
+      className="bg-neutral-900 h-150 pt-40 sm:pt-50 flex flex-col items-center text-center"
+    >
       <h1 className="text-white mb-5  text-4xl sm:text-6xl lg:text-7xl font-bold">
         Baldwin-sudo's Portfolio
       </h1>
       <div className="w-80 sm:w-150 text-start space-y-3">
-        <p className=" block text-white text-lg sm:text-xl  lg:text-2xl font-medium ">
-          {">"} Software Developer & Machine learning engineer
+        <p className=" flex gap-1 text-white text-lg sm:text-xl  lg:text-2xl font-medium ">
+          <p className="inline"> {">"} </p>Software Developer & Machine learning
+          engineer
         </p>
-        <p className="block text-white  text-lg sm:text-xl lg:text-2xl font-medium ">
-          {">"} Majoring in Computer Science at Ensam RABAT
+        <p className="flex gap-1 text-white  text-lg sm:text-xl lg:text-2xl font-medium ">
+          <p className="inline"> {">"} </p> Majoring in Computer Science at
+          Ensam RABAT
         </p>
 
-        <p className="block text-white  text-lg sm:text-xl lg:text-2xl  font-medium ">
-          {">"} I work with passion , wether while i'am developing an App , or
-          finetunning a model
+        <p className=" flex gap-1 text-white  text-lg sm:text-xl lg:text-2xl  font-medium ">
+          <p className="inline"> {">"} </p> I work with passion , wether while
+          i'am developing an App , or finetunning a model
         </p>
       </div>
       <div className="flex gap-2 sm:gap-4 mt-5 sm:mt-15 ">
@@ -32,4 +37,5 @@ export default function About() {
       </div>
     </div>
   );
-}
+});
+export default About;
