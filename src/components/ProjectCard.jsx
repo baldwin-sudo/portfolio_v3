@@ -25,14 +25,14 @@ export default function ProjectCard({ project }) {
         <p className="text-lg  text-neutral-500">{description}</p>
         <div className="flex gap-10 mt-5">
           {github && (
-            <button className="flex  items-center justify-center gap-1 border-1 rounded-full px-4 sm:px-6 py-3 bg-white hover:opacity-80 text-lg sm:text-xl  cursor-pointer ">
+            <button className="w-30 lg:w-35 flex  items-center justify-center gap-1 border-1 rounded-full px-4 sm:px-6 py-3 bg-white hover:opacity-80 text-lg sm:text-xl  cursor-pointer ">
               {" "}
               <img className="w-6 h-6" src={githubIco} alt="" />
               Github
             </button>
           )}
           {demo && (
-            <button className="flex  items-center justify-center gap-1  rounded-full px-4 sm:px-6 py-3 bg-neutral-900 hover:opacity-80 text-white text-lg sm:text-xl cursor-pointer ">
+            <button className="w-30 lg:w-35  flex  items-center justify-center gap-1  rounded-full px-4 sm:px-6 py-3 bg-neutral-900 hover:opacity-80 text-white text-lg sm:text-xl cursor-pointer ">
               <img className="w-6 h-6" src={linkIco} alt="" />
               <a href={demo}>Live</a>
             </button>
