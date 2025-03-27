@@ -6,6 +6,7 @@ const Skills = forwardRef((props, ref) => {
   const skills = [
     "html5",
     "css3",
+    "tailwindcss",
     "js",
     "nodejs",
     "reactjs",
