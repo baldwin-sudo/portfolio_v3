@@ -4,12 +4,11 @@ import EducationCard from "./EducationCard";
 const Education = forwardRef((props, ref) => {
   const educations = [
     {
-      degreeName: "Artificial Intelligence & Data Science ",
+      degreeName: "Artificial Intelligence & Data Science Engineering Degree",
       schoolName: "Ensam-R , Morocco",
       graduationDate: " Graduating class : 2021 - 2026",
       schoolImgUrl: null,
-      description:
-        "I contributed to the design and development of an information system for managing pilgrimage phases, including medication, service providers, and patient management. This project was built using React and Node.js to create a modern and responsive solution.",
+      description: "",
     },
   ];
 

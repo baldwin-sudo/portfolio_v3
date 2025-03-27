@@ -29,7 +29,7 @@ export default function NavBar({ scrollToSection }) {
     });
   };
   return (
-    <div className="z-10 bg-white/75  backdrop-blur-3xl fixed top-0 left-1/2 -translate-x-1/2 sm:m-5 flex flex-wrap  items-center justify-center  sm:rounded-full w-full sm:w-fit  sm:flex-nowrap gap-1 sm:gap-8 py-4 px-15 sm:px-4     sm:shadow-lg">
+    <div className="z-10 bg-white/60  backdrop-blur-3xl fixed top-0 left-1/2 -translate-x-1/2 sm:m-5 flex flex-wrap  items-center justify-center  sm:rounded-full w-full sm:w-fit  sm:flex-nowrap gap-1 sm:gap-8 py-4 px-15 sm:px-4     shadow-lg">
       <motion.div
         className=" bg-neutral-200 rounded-full "
         // Animate when this value changes:
@@ -57,7 +57,7 @@ export default function NavBar({ scrollToSection }) {
               onClick(e, index);
               setCurrentMenuItem(item);
             }}
-            className="text-neutral-600 hover:text-neutral-950  rounded-full px-3 py-1.5"
+            className="text-neutral-500 hover:text-black  rounded-full px-3 py-1.5"
           >
             {item}
           </button>
