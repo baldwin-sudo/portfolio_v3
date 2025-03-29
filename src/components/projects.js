@@ -1,13 +1,23 @@
 import luxurious from "../assets/luxurious-p.png";
+import booking from "../assets/booking-p.png";
 const projects = [
   {
     title: "Luxurious Clothing",
-    tech: ["reactjs"],
+    tech: ["reactjs", "tailwindcss"],
     img: luxurious,
     description:
       "Luxury clothes shop , developped using React js , and fakeStore Api for the data , deployed using netlify .",
     demo: "https://eluxury.netlify.app/",
     github: "https://github.com/baldwin-sudo/eluxury",
+  },
+  {
+    title: "Baldwin Books",
+    tech: ["nextjs", "mysql", "tailwindcss"],
+    img: booking,
+    description:
+      "I kept loosing my progression when reading books , so i made this - My own Book reading progression tracker . ",
+    demo: null,
+    github: "https://github.com/baldwin-sudo/Book-reading-tracker",
   },
 
   {
