@@ -1,5 +1,6 @@
 import luxurious from "../assets/luxurious-p.png";
 import booking from "../assets/booking-p.png";
+import car_sales from "../assets/car-sales-p.png";
 const projects = [
   {
     title: "Luxurious Clothing",
@@ -9,6 +10,15 @@ const projects = [
       "Luxury clothes shop , developped using React js , and fakeStore Api for the data , deployed using netlify .",
     demo: "https://eluxury.netlify.app/",
     github: "https://github.com/baldwin-sudo/eluxury",
+  },
+  {
+    title: "Car Sales Dashboard",
+    tech: ["nextjs", "postgresql", "tailwindcss"],
+    img: car_sales,
+    description:
+      "A Car sales Dashboard made to get different Insights from the data , made using Next js 15  (React Server Components ,Server Actions , Streaming)  and Postgresql.",
+    demo: null,
+    github: "https://github.com/baldwin-sudo/car_sales_dashboard",
   },
   {
     title: "Baldwin Books",
