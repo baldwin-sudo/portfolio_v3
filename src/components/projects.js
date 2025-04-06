@@ -32,7 +32,7 @@ const projects = [
 
   {
     title: "PassKeeper",
-    tech: ["reactjs", "go", "sqlite3"],
+    tech: ["reactjs", "go", "mysql"],
     img: null,
     description:
       "My own passwords manager , built using React js , Golang and Sqlite .(on going developement)",
