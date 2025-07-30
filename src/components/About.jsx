@@ -4,11 +4,12 @@ import linkdedinIco from "../assets/linkedin-icon.png";
 import tabIco from "../assets/tab-ico.png";
 import myImage from "../assets/me.jpeg";
 import TyperWriterEffect from "./TyperWriterEffect";
+//TODO:add contact button
 const About = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="relative z-1  h-fit pt-35 pb-10 lg:min-h-150  bg-blue-300/30 w-full  flex flex-col  justify-around items-center lg:flex-row lg:gap-5 lg:justify-between  px-10 "
+      className="relative z-1  h-fit pt-35 pb-10 lg:min-h-150  bg-blue-300/30 w-full  flex flex-col  justify-around items-center lg:flex-row lg:gap-5 lg:justify-around  px-10 "
       //style={{ background: "radial-gradient(circle, #9cbbff, #3877ff)" }}
     >
       <div
@@ -27,7 +28,7 @@ const About = forwardRef((props, ref) => {
         </div>
       </div>
       <div
-        className="w-60 h-80 lg:w-80 lg:h-100 rounded-full border-4 border-blue-400 hover:scale-120 transition-all duration-200 bg-cover bg-center scale-110 m-5 "
+        className="w-60 h-80 lg:w-80 lg:h-100 rounded-lg border-4 border-blue-400 hover:scale-115 transition-all duration-200 bg-cover bg-center scale-110 m-5 "
         style={{ backgroundImage: `url(${myImage})` }}
       ></div>
     </div>
