@@ -1,5 +1,6 @@
 import luxurious from "../assets/luxurious-p.png";
 import booking from "../assets/booking-p.png";
+import translated from "../assets/translated.png";
 import car_sales from "../assets/car-sales-p.png";
 const projects = [
   {
@@ -21,13 +22,12 @@ const projects = [
     github: "https://github.com/baldwin-sudo/car_sales_dashboard",
   },
   {
-    title: "Baldwin Books",
-    tech: ["nextjs", "mysql", "tailwindcss"],
-    img: booking,
-    description:
-      "I kept loosing my progression when reading books , so i made this - My own Book reading progression tracker . ",
-    demo: null,
-    github: "https://github.com/baldwin-sudo/Book-reading-tracker",
+    title: "Translated.io",
+    tech: ["reactjs", "tailwindcss"],
+    img: translated,
+    description: "A web interface leveraging mymemory API to translate text. ",
+    demo: "https://translated-io.netlify.app/",
+    github: "https://github.com/baldwin-sudo/translated.io",
   },
 
   {

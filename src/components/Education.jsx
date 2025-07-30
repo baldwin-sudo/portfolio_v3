@@ -17,7 +17,9 @@ const Education = forwardRef((props, ref) => {
       ref={ref}
       className="flex flex-col items-center justify-center scroll-mt-0"
     >
-      <h1 className="text-center text-3xl sm:text-5xl">My Education</h1>
+      <h1 className="text-center text-3xl text-blue-500 sm:text-5xl">
+        My Education
+      </h1>
       <div className="flex flex-col items-center justify-center max-w-200 gap-10 p-10">
         {educations.map((education) => (
           <EducationCard key={education.degreeName} education={education} />

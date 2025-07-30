@@ -59,7 +59,9 @@ const Skills = forwardRef((props, ref) => {
 
   return (
     <div ref={ref} className="max-w-250 mx-auto scroll-mt-30">
-      <h1 className="text-center text-3xl sm:text-5xl mb-5">My Skills</h1>
+      <h1 className="text-center text-blue-600 text-3xl sm:text-5xl mb-5">
+        My Skills
+      </h1>
       <motion.div
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -73,7 +75,7 @@ const Skills = forwardRef((props, ref) => {
             className="flex flex-col items-center justify-center gap-1.5"
           >
             <StackIcon name={skill} className="size-15 lg:size-20" />
-            <p className="text-xl lg:text-2xl">{skill}</p>
+            <p className="text-xl lg:text-2xl text-neutral-400">{skill}</p>
           </motion.div>
         ))}
       </motion.div>
