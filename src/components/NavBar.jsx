@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
 
 export default function NavBar({ scrollToSection }) {
-  const menuItems = ["about", "projects", "experience", "skills", "education"];
+  const menuItems = ["about", "projects", "skills", "experience", "education"];
 
   const [bubleDimensions, setBubleDimensions] = useState({
     top: 0,

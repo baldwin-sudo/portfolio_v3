@@ -53,7 +53,7 @@ const About = forwardRef((props, ref) => {
           className="min-w-25  sm:min-w-35 h-fit py-2 sm:py-3 lg:w-35  flex  items-center justify-center gap-1  rounded-full px-6 sm:px-6  bg-blue-400 hover:opacity-80 text-white text-sm sm:text-lg cursor-pointer "
         >
           <img className="z-1 w-4 h-4 sm:w-6 sm:h-6" src={linkIco} alt="" />
-          <p>Live</p>
+          <p>Linkedin</p>
         </a>
       </div>
     </div>
