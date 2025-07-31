@@ -10,7 +10,9 @@ export default function EducationCard({ education }) {
       <p className="text-neutral-500 text-lg sm:text-xl">
         {education.schoolName}
       </p>
-      <p className="text-sm sm:text-lg">{education.description}</p>
+      <p className="text-sm sm:text-lg text-neutral-600">
+        {education.description}
+      </p>
       <p className="text-neutral-400">{education.graduationDate}</p>
     </div>
   );

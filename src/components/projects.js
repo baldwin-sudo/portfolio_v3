@@ -2,6 +2,7 @@ import luxurious from "../assets/luxurious-p.png";
 import booking from "../assets/booking-p.png";
 import translated from "../assets/translated.png";
 import car_sales from "../assets/car-sales-p.png";
+import digitalbank from "../assets/digitalbank.png";
 const projects = [
   {
     title: "Luxurious Clothing",
@@ -20,6 +21,14 @@ const projects = [
       "A Car sales Dashboard made to get different Insights from the data , made using Next js 15  (React Server Components ,Server Actions , Streaming)  and Postgresql.",
     demo: null,
     github: "https://github.com/baldwin-sudo/car_sales_dashboard",
+  },
+  {
+    title: "DigitalBank landing page",
+    tech: ["reactjs", "tailwindcss"],
+    img: digitalbank,
+    description: "A responsive Landing page for  DigitalBank",
+    demo: "https://digitalbank-landing.netlify.app/",
+    github: "https://github.com/baldwin-sudo/digitalbank-landing",
   },
   {
     title: "Translated.io",

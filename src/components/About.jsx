@@ -31,7 +31,7 @@ const About = forwardRef((props, ref) => {
           </div>
         </div>{" "}
         <div
-          className="w-40 h-60 sm:w-60 sm:h-80 lg:w-80 lg:h-100 rounded-lg border-4 border-blue-400 hover:scale-115 transition-all duration-200 bg-cover bg-center scale-110 m-5 "
+          className="w-40 h-60 sm:w-60 sm:h-80 lg:w-80 lg:h-100 rounded-sm border-4 border-blue-400 hover:scale-115 transition-all duration-200 bg-cover bg-center scale-110 m-5 "
           style={{ backgroundImage: `url(${myImage})` }}
         ></div>
       </div>
