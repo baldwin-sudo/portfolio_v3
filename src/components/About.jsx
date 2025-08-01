@@ -11,7 +11,7 @@ const About = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="relative z-1  h-fit min-h-screen sm:h-screen pt-25    sm:pb-0 lg:min-h-150  bg-gray-600/30 w-full  flex flex-col  justify-center gap-5   lg:gap-5 lg:justify-around  px-10 "
+      className="relative z-1 h-fit min-h-screen sm:h-screen pt-25    sm:pb-0 lg:min-h-150   bg-linear-60 from-black/70 to-gray-800/90 w-full  flex flex-col  justify-center gap-5   lg:gap-5 lg:justify-around  px-10 "
       //style={{ background: "radial-gradient(circle, #9cbbff, #3877ff)" }}
     >
       <div
@@ -19,11 +19,11 @@ const About = forwardRef((props, ref) => {
       "
       >
         <div className="self-center">
-          <h1 className="text-left text-blue-500  text-xl sm:text-4xl lg:text-5xl font-semibold ">
+          <h1 className="text-left text-neutral-50  text-xl sm:text-4xl lg:text-5xl font-semibold ">
             Baldwin-sudo's Portfolio{" "}
           </h1>
 
-          <div className=" mb-10 flex gap-1 text-left text-blue-400 text-lg   lg:text-2xl font-medium ">
+          <div className=" mb-10 flex gap-1 text-left text-neutral-100 text-lg   lg:text-2xl font-medium ">
             <TyperWriterEffect
               pause={1750}
               text="Software Developer & Machine learning engineer"
@@ -31,7 +31,7 @@ const About = forwardRef((props, ref) => {
           </div>
         </div>{" "}
         <div
-          className="w-40 h-60 sm:w-60 sm:h-80 lg:w-80 lg:h-100 rounded-sm border-4 border-blue-400 hover:scale-115 transition-all duration-200 bg-cover bg-center scale-110 m-5 "
+          className="z-3 w-40 h-60 sm:w-60 sm:h-80 lg:w-80 lg:h-100 rounded-sm border-2 border-neutral-400 hover:scale-115 transition-all duration-200 bg-cover bg-center scale-110 m-5 "
           style={{ backgroundImage: `url(${myImage})` }}
         ></div>
       </div>

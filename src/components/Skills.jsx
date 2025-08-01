@@ -61,7 +61,7 @@ const Skills = forwardRef((props, ref) => {
 
   return (
     <div ref={ref} className="max-w-250 mx-auto scroll-mt-30">
-      <h1 className="text-center text-blue-600 text-3xl sm:text-5xl mb-5">
+      <h1 className="text-center text-neutral-600 text-3xl sm:text-5xl mb-5">
         Tech Stack
       </h1>
       <motion.div

@@ -48,14 +48,14 @@ const Projects = forwardRef((props, ref) => {
   }, [clickedTypeItem]);
   return (
     <div ref={ref} className="scroll-mt-30">
-      <h1 className="text-center text-3xl sm:text-5xl text-blue-500">
+      <h1 className="text-center text-3xl sm:text-5xl text-neutral-700">
         My Projects
       </h1>
       {/* projects types  bar*/}
-      <div className="relative mt-5 flex items-center justify-center lg:text-lg  lg:gap-5  p-2 rounded-full bg-white border-2 border-blue-100/50 shadow-xl  text-blue-600 w-fit mx-auto">
+      <div className="relative mt-5 flex items-center justify-center lg:text-lg  lg:gap-5  p-2 rounded-full bg-white border-2 border-neutral-100/50 shadow-xl  text-neutral-600 w-fit mx-auto">
         {/* bubble style<div > */}
         <motion.div
-          className="bg-linear-60 from-blue-300 to-blue-400 px-8 py-4 font-semibold text-white  rounded-full"
+          className="bg-linear-60 from-gray-400 to-gray-700 px-8 py-4 font-semibold text-white  rounded-full"
           // Animate when this value changes:
           animate={{
             left: bubbleDimensions.left,
@@ -81,7 +81,7 @@ const Projects = forwardRef((props, ref) => {
               className={` z-2 rounded-full  px-5 py-2 transition-all  duration-200 ${
                 clickedTypeItem.text == item.text
                   ? "text-white font-medium"
-                  : "text-blue-400 hover:scale-110   duration-200"
+                  : "text-neutral-500 hover:scale-110   duration-200"
               }`}
             >
               {item.text}
@@ -100,7 +100,7 @@ const Projects = forwardRef((props, ref) => {
       </div>
       <a
         href="https://github.com/baldwin-sudo?tab=repositories"
-        className="flex  items-center justify-center gap-5 bg-blue-500 w-fit mx-auto px-5 lg:px-10 lg:py-3 py-2.5 rounded-lg font-semibold text-white transition-all duration-200 hover:opacity-70 hover:-translate-y-0.5"
+        className="flex  items-center justify-center gap-5 bg-green-500 w-fit mx-auto px-5 lg:px-10 lg:py-3 py-2.5 rounded-lg font-semibold text-white transition-all duration-200 hover:opacity-70 hover:-translate-y-0.5"
       >
         {" "}
         <img className="h-8 w-6" src={repoIco} alt="" />

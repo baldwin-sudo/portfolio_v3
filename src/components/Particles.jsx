@@ -58,10 +58,10 @@ export default function ParticlesBackground() {
           value: "#000000",
         },
         links: {
-          color: "#999999",
-          distance: 150,
+          color: "#888888",
+          distance: 100,
           enable: true,
-          opacity: 0.5,
+          opacity: 0.8,
           width: 1,
         },
         move: {
@@ -97,7 +97,7 @@ export default function ParticlesBackground() {
 
   if (init) {
     return (
-      <div className="z-0 absolute inset-0 pointer-events-none">
+      <div className="z-1 absolute inset-0 pointer-events-none">
         <Particles
           className=""
           id="tsparticles"

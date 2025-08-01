@@ -32,10 +32,10 @@ export default function ProjectCard({ project }) {
   });
   const { title, tech, github, demo, description, img, state } = project;
   return (
-    <div className="project-card-overlay relative shadow-lg bg-white hover:shadow-xl  p-4 lg:p-8 rounded-lg  border-1 border-l-4 border-l-blue-500 border-neutral-50 transition-all duration-100 ">
+    <div className="project-card-overlay relative shadow-lg bg-white hover:shadow-xl  p-4  pt-0 lg:p-8 rounded-lg  border-1 border-l-4 border-l-gray-500 border-neutral-50 transition-all duration-100 ">
       <div
         className={clsx(
-          "absolute top-0 opacity-70 right-0 px-3 py-1.5 rounded-lg text-xs lg:text-sm font-light sm:font-medium z-50 capitalize mr-1 mt-1 border-2",
+          "w-fit self-end justify-self-end ml-auto lg:ml-auto m-2  opacity-70 right-0 px-3 py-1.5 rounded-lg text-xs lg:text-sm font-light sm:font-medium z-50 capitalize   border-2",
           stateColors[state].bg,
           stateColors[state].text,
           stateColors[state].border
@@ -53,9 +53,9 @@ export default function ProjectCard({ project }) {
         transition={{ type: "spring", stiffness: 150, damping: 15 }}
       >
         <div ref={ref} className="flex flex-col gap-5 w-full lg:w-150 ">
-          <h1 className="text-xl text-blue-500 font-semibold">{title}</h1>
+          <h1 className="text-xl text-gray-600 font-semibold">{title}</h1>
           <div className="flex items-center gap-1">
-            <span className="font-medium  text-blue-500">Made with :</span>{" "}
+            <span className="font-medium  text-gray-500">Made with :</span>{" "}
             {tech.map((t, index) => {
               return (
                 <p key={index} className="inline">
@@ -72,18 +72,18 @@ export default function ProjectCard({ project }) {
               <a
                 href={github}
                 target="_blank"
-                className="w-30 lg:w-35 flex  items-center justify-center gap-1 border-2 rounded-full px-4 sm:px-6 py-3 bg-white hover:opacity-80 text-lg sm:text-xl border-blue-300 cursor-pointer "
+                className="w-30 lg:w-35 flex  items-center justify-center gap-1 border-2 rounded-full px-4 sm:px-6 py-3 bg-white hover:opacity-80 text-lg sm:text-xl border-neutral-600 cursor-pointer "
               >
                 {" "}
                 <img className="w-6 h-6" src={githubIco} alt="" />
-                <span className="text-blue-400">Github</span>
+                <span className="text-gray-600">Github</span>
               </a>
             )}
             {demo && (
               <a
                 href={demo}
                 target="_blank"
-                className="w-30 lg:w-35  flex  items-center justify-center gap-1  rounded-full px-4 sm:px-6 py-3 bg-blue-400 hover:opacity-80 text-white text-lg sm:text-xl cursor-pointer "
+                className="w-30 lg:w-35  flex  items-center justify-center gap-1  rounded-full px-4 sm:px-6 py-3 bg-neutral-600 hover:opacity-80 text-white text-lg sm:text-xl cursor-pointer "
               >
                 <img className="z-1 w-6 h-6" src={linkIco} alt="" />
                 <p>Live</p>

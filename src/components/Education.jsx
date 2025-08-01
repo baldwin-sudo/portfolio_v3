@@ -24,11 +24,11 @@ const Education = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="flex flex-col items-center justify-center scroll-mt-0"
+      className="z-2 flex flex-col items-center justify-center scroll-mt-0"
     >
       {" "}
       <div className="flex flex-col items-center justify-center max-w-200 gap-10 p-10">
-        <h1 className="text-center text-3xl text-blue-500 sm:text-5xl">
+        <h1 className="text-center text-3xl text-neutral-600 sm:text-5xl">
           My Education
         </h1>
         {educations.map((education) => (

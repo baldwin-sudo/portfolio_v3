@@ -22,9 +22,9 @@ const Experience = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="flex flex-col items-center justify-center scroll-mt-30"
+      className="z-2 flex flex-col items-center justify-center scroll-mt-30"
     >
-      <h1 className="text-blue-500 text-center text-3xl sm:text-5xl">
+      <h1 className="text-neutral-600 text-center text-3xl sm:text-5xl">
         My Experience
       </h1>
       <div className="flex flex-col  items-center justify-center max-w-200 gap-10 p-10">
