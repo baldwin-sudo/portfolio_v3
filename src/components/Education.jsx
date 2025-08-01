@@ -24,7 +24,7 @@ const Education = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="z-2 flex flex-col items-center justify-center scroll-mt-0"
+      className="z-2    flex flex-col items-center justify-center scroll-mt-0"
     >
       {" "}
       <div className="flex flex-col items-center justify-center max-w-200 gap-10 p-10">
