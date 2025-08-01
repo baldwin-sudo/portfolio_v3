@@ -35,8 +35,8 @@ const About = forwardRef((props, ref) => {
           style={{ backgroundImage: `url(${myImage})` }}
         ></div>
       </div>
-
-      <div className="self-center flex sm:self-start w-fit gap-2 sm:px-10 lg:px-20 xl:px-25">
+      {/* contact buttons */}
+      <div className="hidden self-center flex sm:self-start w-fit gap-2 sm:px-10 lg:px-20 xl:px-25">
         <a
           href="https://github.com/baldwin-sudo"
           target="_blank"

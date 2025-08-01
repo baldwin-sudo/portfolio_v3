@@ -5,16 +5,44 @@ import linkIco from "../assets//link-icon.png";
 import StackIcon from "tech-stack-icons";
 import { motion, useInView } from "framer-motion";
 import { div } from "framer-motion/client";
-
+import clsx from "clsx";
 export default function ProjectCard({ project }) {
+  const stateColors = {
+    "on going ...": {
+      bg: "bg-yellow-200",
+      text: "text-yellow-600",
+      border: "border-yellow-500",
+    },
+    finished: {
+      bg: "bg-green-200",
+      text: "text-green-600",
+      border: "border-green-500",
+    },
+    archived: {
+      bg: "bg-gray-200",
+      text: "text-gray-600",
+      border: "border-gray-500",
+    },
+  };
+
   const ref = useRef(null);
   const inView = useInView(ref, {
     triggerOnce: false,
     threshold: 0.8,
   });
-  const { title, tech, github, demo, description, img } = project;
+  const { title, tech, github, demo, description, img, state } = project;
   return (
-    <div className="project-card-overlay shadow-lg bg-white hover:shadow-xl  p-4 lg:p-8 rounded-lg  border-1 border-l-4 border-l-blue-500 border-neutral-50 transition-all duration-100 ">
+    <div className="project-card-overlay relative shadow-lg bg-white hover:shadow-xl  p-4 lg:p-8 rounded-lg  border-1 border-l-4 border-l-blue-500 border-neutral-50 transition-all duration-100 ">
+      <div
+        className={clsx(
+          "absolute top-0 right-0 px-3 py-1.5 rounded-lg text-xs lg:text-sm font-light sm:font-medium z-50 capitalize mr-1 mt-1 border-2",
+          stateColors[state].bg,
+          stateColors[state].text,
+          stateColors[state].border
+        )}
+      >
+        {state}
+      </div>
       <motion.div
         className="  flex  w-fit sm:w-150 lg:w-225 xl:w-250  "
         initial={{ scale: 0.95, opacity: 0.6 }}

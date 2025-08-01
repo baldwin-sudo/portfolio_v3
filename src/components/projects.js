@@ -12,6 +12,7 @@ const projects = [
   {
     title: "Luxurious Clothing",
     tech: ["reactjs", "tailwindcss"],
+    state: "finished",
     img: luxurious,
     type: 0,
     description:
@@ -22,6 +23,7 @@ const projects = [
   {
     title: "Car Sales Dashboard",
     tech: ["nextjs", "postgresql", "tailwindcss"],
+    state: "finished",
     img: car_sales,
     type: 1,
     description:
@@ -33,6 +35,7 @@ const projects = [
     title: "DigitalBank landing page",
     tech: ["reactjs", "tailwindcss"],
     img: digitalbank,
+    state: "on going ...",
     type: 0,
     description: "A responsive Landing page for  DigitalBank",
     demo: "https://digitalbank-landing.netlify.app/",
@@ -41,6 +44,7 @@ const projects = [
   {
     title: "Translated.io",
     tech: ["reactjs", "tailwindcss"],
+    state: "finished",
     img: translated,
     type: 0,
     description: "A web interface leveraging mymemory API to translate text. ",
@@ -50,6 +54,7 @@ const projects = [
 
   {
     title: "PassKeeper",
+    state: "on going ...",
     tech: ["reactjs", "go", "mysql"],
     img: null,
     type: 1,
@@ -64,6 +69,7 @@ const projects = [
     tech: ["python", "elastic", "openai", "streamlit"],
     img: null,
     type: 2,
+    state: "finished",
 
     description:
       "An AI-powered chatbot with memory and history, built using LangChain and Streamlit. Just upload your PDFs—Lama will parse them, Elasticsearch will index the content, and OpenAI will deliver smart, context-aware responses.",
@@ -74,7 +80,7 @@ const projects = [
     title: "Custom Deep learning Framework",
     tech: ["python", "pytorch", "rust"],
     img: null,
-
+    state: "finished",
     type: 2,
     description:
       "I made my own Deep learning framework ,inspired by the design of Pytorch's.Implemented Firstly using Python ,and Secondly a minimal version using Rust.",

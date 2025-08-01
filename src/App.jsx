@@ -27,8 +27,8 @@ export default function App() {
   return (
     <>
       <ParticlesBackground />
+      <NavBar scrollToSection={scrollToSection} />
       <div className="relative  bg-neutral-100/40 flex flex-col items-center justify-center gap-5 sm:gap-10 lg:gap-15  overflow-hidden">
-        <NavBar scrollToSection={scrollToSection} />
         <About ref={sectionRefs.about} />
         <SectionSeparator />
         <Projects ref={sectionRefs.projects} />
