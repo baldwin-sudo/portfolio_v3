@@ -35,7 +35,7 @@ export default function ProjectCard({ project }) {
     <div className="project-card-overlay relative shadow-lg bg-white hover:shadow-xl  p-4 lg:p-8 rounded-lg  border-1 border-l-4 border-l-blue-500 border-neutral-50 transition-all duration-100 ">
       <div
         className={clsx(
-          "absolute top-0 right-0 px-3 py-1.5 rounded-lg text-xs lg:text-sm font-light sm:font-medium z-50 capitalize mr-1 mt-1 border-2",
+          "absolute top-0 opacity-70 right-0 px-3 py-1.5 rounded-lg text-xs lg:text-sm font-light sm:font-medium z-50 capitalize mr-1 mt-1 border-2",
           stateColors[state].bg,
           stateColors[state].text,
           stateColors[state].border

@@ -11,7 +11,7 @@ const About = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="relative z-1  h-fit min-h-screen sm:h-screen pt-25    sm:pb-0 lg:min-h-150  bg-blue-300/30 w-full  flex flex-col  justify-center gap-5   lg:gap-5 lg:justify-around  px-10 "
+      className="relative z-1  h-fit min-h-screen sm:h-screen pt-25    sm:pb-0 lg:min-h-150  bg-gray-600/30 w-full  flex flex-col  justify-center gap-5   lg:gap-5 lg:justify-around  px-10 "
       //style={{ background: "radial-gradient(circle, #9cbbff, #3877ff)" }}
     >
       <div

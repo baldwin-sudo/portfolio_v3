@@ -55,10 +55,10 @@ export default function ParticlesBackground() {
       },
       particles: {
         color: {
-          value: "#155efc",
+          value: "#000000",
         },
         links: {
-          color: "#6f9cfc",
+          color: "#999999",
           distance: 150,
           enable: true,
           opacity: 0.5,
