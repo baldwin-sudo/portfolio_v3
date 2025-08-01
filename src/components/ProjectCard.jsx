@@ -14,10 +14,10 @@ export default function ProjectCard({ project }) {
   });
   const { title, tech, github, demo, description, img } = project;
   return (
-    <div className="project-card-overlay  p-4 lg:p-8 rounded-lg  border-1 border-l-4 border-l-blue-500 border-neutral-200 ">
+    <div className="project-card-overlay shadow-lg bg-white hover:shadow-xl  p-4 lg:p-8 rounded-lg  border-1 border-l-4 border-l-blue-500 border-neutral-50 transition-all duration-100 ">
       <motion.div
         className="  flex  w-fit sm:w-150 lg:w-225 xl:w-250  "
-        initial={{ scale: 0.7, opacity: 0.6 }}
+        initial={{ scale: 0.95, opacity: 0.6 }}
         viewport={{ once: false, amount: 0.8 }} // Triggers when 30% of the div is visible
         animate={
           inView ? { scale: 1.0, opacity: 1 } : { scale: 0.8, opacity: 0.6 }
