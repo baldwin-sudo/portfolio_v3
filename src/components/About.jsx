@@ -18,22 +18,20 @@ const About = forwardRef((props, ref) => {
         className="flex flex-col sm:flex-row items-center justify-around
       "
       >
-        <div className="self-center">
-          <h1 className="text-left text-neutral-50  text-xl sm:text-4xl lg:text-5xl font-semibold ">
+        <div className="self-center w-fit mx-auto   ">
+          <h1 className=" text-neutral-50  text-xl text-center sm:text-4xl lg:text-5xl font-semibold ">
             Baldwin-sudo's Portfolio{" "}
           </h1>
 
-          <div className=" mb-10 flex gap-1 text-left text-neutral-100 text-lg   lg:text-2xl font-medium ">
-            <TyperWriterEffect
-              pause={1750}
-              text="Software Developer & Machine learning engineer"
-            />
+          <div className="mb-10 w-full sm:w-auto flex justify-start sm:justify-center">
+            <div className="text-center text-neutral-300 text-sm sm:text-xl lg:text-2xl font-medium whitespace-nowrap overflow-hidden text-ellipsis">
+              <TyperWriterEffect
+                pause={1750}
+                text="Software Developer & Machine Learning Engineer"
+              />
+            </div>
           </div>
         </div>{" "}
-        <div
-          className="z-3 w-40 h-60 sm:w-60 sm:h-80 lg:w-80 lg:h-100 rounded-sm border-2 border-neutral-400 hover:scale-115 transition-all duration-200 bg-cover bg-center scale-110 m-5 "
-          style={{ backgroundImage: `url(${myImage})` }}
-        ></div>
       </div>
       {/* contact buttons */}
       <div className="hidden self-center flex sm:self-start w-fit gap-2 sm:px-10 lg:px-20 xl:px-25">
