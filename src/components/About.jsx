@@ -11,7 +11,7 @@ const About = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="relative z-1 h-fit min-h-screen sm:h-screen pt-25    sm:pb-0 lg:min-h-150   bg-linear-60 from-black/70 to-gray-800/90 w-full  flex flex-col  justify-center gap-5   lg:gap-5 lg:justify-around  px-10 "
+      className="relative  h-fit min-h-screen sm:h-screen pt-15 sm:pt-25    sm:pb-0 lg:min-h-150   bg-linear-60 from-black/70 to-gray-800/90 w-full  flex flex-col  justify-center gap-5   lg:gap-5 lg:justify-around  px-10 "
       //style={{ background: "radial-gradient(circle, #9cbbff, #3877ff)" }}
     >
       <div
@@ -31,27 +31,40 @@ const About = forwardRef((props, ref) => {
               />
             </div>
           </div>
+          {/* <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
+            reprehenderit alias illo nisi quibusdam nulla ullam fuga quo non,
+            consequuntur odio error pariatur facere possimus architecto
+            accusamus nostrum consectetur doloribus.
+          </p> */}
         </div>{" "}
       </div>
       {/* contact buttons */}
-      <div className="hidden self-center flex sm:self-start w-fit gap-2 sm:px-10 lg:px-20 xl:px-25">
+      <div
+        className="fixed top-100 left-0 translate-y-50 lg:translate-y-0 lg:top-0 z-50 flex sm:flex-col gap-2
+                bg-neutral-900/90 backdrop-blur-md   shadow-lg rounded-br-full rounded-tr-full p-2 pr-4 sm:p-6 sm:pr-8 hover:bg-green-400  "
+      >
         <a
           href="https://github.com/baldwin-sudo"
           target="_blank"
-          className="min-w-25  sm:min-w-35 h-fit py-2 sm:py-3 lg:w-35  flex  items-center justify-center gap-1  rounded-full px-6 sm:px-6  bg-white border-2 hover:opacity-80 text-blue-400 text-sm sm:text-lg cursor-pointer "
+          className="h-fit   flex  items-center justify-center gap-1    hover:opacity-80 text-white text-sm sm:text-lg cursor-pointer "
         >
           {" "}
-          <img className=" w-4 h-4 sm:w-6 sm:h-6" src={githubIco} alt="" />
-          <span className="text-blue-400">Github</span>
+          <img className=" w-6 h-6 sm:w-6 sm:h-6" src={githubIco} alt="" />
+          <span className="hidden ">Github</span>
         </a>
 
         <a
           href="https://www.linkedin.com/in/el-mehdi-kasmi-04ab45231/"
           target="_blank"
-          className="min-w-25  sm:min-w-35 h-fit py-2 sm:py-3 lg:w-35  flex  items-center justify-center gap-1  rounded-full px-6 sm:px-6  bg-blue-400 hover:opacity-80 text-white text-sm sm:text-lg cursor-pointer "
+          className=" h-fit   flex  items-center justify-center gap-1    hover:opacity-80 text-white text-sm sm:text-lg cursor-pointer "
         >
-          <img className="z-1 w-4 h-4 sm:w-6 sm:h-6" src={linkIco} alt="" />
-          <p>Linkedin</p>
+          <img
+            className="z-1 w-6 h-6 sm:w-6 sm:h-6"
+            src={linkdedinIco}
+            alt=""
+          />
+          <p className="hidden">Linkedin</p>
         </a>
       </div>
     </div>
