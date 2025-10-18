@@ -41,7 +41,7 @@ const About = forwardRef((props, ref) => {
       </div>
       {/* contact buttons */}
       <div
-        className="fixed top-100 left-0 translate-y-50 lg:translate-y-0 lg:top-0 z-50 flex sm:flex-col gap-2
+        className="fixed top-100 left-0 translate-y-50 lg:translate-y-0 lg:top-0 z-50 flex  gap-2
                 bg-neutral-900/90 backdrop-blur-md   shadow-lg rounded-br-full rounded-tr-full p-2 pr-4 sm:p-6 sm:pr-8 hover:bg-green-400  "
       >
         <a
