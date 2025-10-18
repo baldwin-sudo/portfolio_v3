@@ -5,18 +5,26 @@ const Experience = forwardRef((props, ref) => {
   const experiences = [
     {
       role: "Internship ",
-      place: "The Health ministry (morocco)",
-      date: "June 2023 - July 2023",
+      place:
+        "National Office for Drinking Water (ONEP Branche eau )  (morocco)",
+      date: "June 2025 - August 2025",
       description:
-        "I contributed to the design and development of an information system for managing pilgrimage phases, including medication, service providers, and patient management. This project was built using React and Node.js to create a modern and responsive solution.",
+        "Designed an internal system to manage interns and internships, track offers and monitor progress; backend in Golang .",
     },
     {
       role: "Internship ",
       place:
-        "The Ministry of National Territorial Planning, Urban Planning, ...  (morocco)",
+        "The Ministry of National Territorial Planning, Urban Planning  (morocco)",
       date: "June 2024 - August 2024",
       description:
         "My internship at the Ministry of Land Planning focused on artificial intelligence, where I developed a system for evaluating companies' needs before their digitalization. I utilized Large Language Models (LLMs) to analyze requirements and built a web interface to manage the evaluation process.",
+    },
+    {
+      role: "Internship ",
+      place: "The Health ministry (morocco)",
+      date: "June 2023 - July 2023",
+      description:
+        "I contributed to the design and development of an information system for managing pilgrimage phases, including medication, service providers, and patient management. This project was built using React and Node.js to create a modern and responsive solution.",
     },
   ];
   return (

@@ -4,20 +4,20 @@ import EducationCard from "./EducationCard";
 const Education = forwardRef((props, ref) => {
   const educations = [
     {
+      degreeName: "Software Development of Information Systems",
+      schoolName: "Université de Bretagne Occidentale UBO , France",
+      graduationDate: " Graduating class : 2025 - 2026",
+      schoolImgUrl: null,
+      description:
+        "The Master DOSI is a one year graduate program focused on advanced software development, information systems design, and modern software engineering practices. It prepares students to design, develop, and manage complex information systems in professional environments.",
+    },
+    {
       degreeName: "Artificial Intelligence & Data Science Engineering Degree",
-      schoolName: "Ensam-R , Morocco",
+      schoolName: "École Nationale d'Arts et Metiers Ensam-R , Morocco",
       graduationDate: " Graduating class : 2021 - 2026",
       schoolImgUrl: null,
       description:
         "An engineering specialization in Machine Learning, Data Science, and Software Development, combining advanced algorithms, intelligent systems, and practical software engineering to build innovative digital solutions across various domains.",
-    },
-    {
-      degreeName: "Software Development of Information Systems",
-      schoolName: "UBO , France",
-      graduationDate: " Graduating class : 2024 - 2026",
-      schoolImgUrl: null,
-      description:
-        "The Master DOSI is a two-year graduate program focused on advanced software development, information systems design, and modern software engineering practices. It prepares students to design, develop, and manage complex information systems in professional environments.",
     },
   ];
 
