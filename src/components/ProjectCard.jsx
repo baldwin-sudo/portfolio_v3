@@ -59,7 +59,7 @@ export default function ProjectCard({ project }) {
             {tech.map((t, index) => {
               return (
                 <p key={index} className="inline">
-                  {<StackIcon name={t} className="size-10 lg:size-15" /> || (
+                  {<StackIcon name={t} className="size-10 lg:size-12" /> || (
                     <p className="text-black">{t}</p>
                   )}
                 </p>

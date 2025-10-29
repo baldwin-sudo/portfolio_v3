@@ -3,6 +3,7 @@ import booking from "../assets/booking-p.png";
 import translated from "../assets/translated.png";
 import car_sales from "../assets/car-sales-p.png";
 import digitalbank from "../assets/digitalbank.png";
+import chatApp from "../assets/chat-app.png";
 
 // types :
 // frontend : 0
@@ -30,6 +31,17 @@ const projects = [
       "A Car sales Dashboard made to get different Insights from the data , made using Next js 15  (React Server Components ,Server Actions , Streaming)  and Postgresql.",
     demo: null,
     github: "https://github.com/baldwin-sudo/car_sales_dashboard",
+  },
+  {
+    title: "Real time chat app",
+    tech: ["reactjs", "postgresql", "redis", "tailwindcss"],
+    state: "finished",
+    img: chatApp,
+    type: 1,
+    description:
+      "Built a real-time chat application with secure authentication, private and group messaging, and a serverless backend architecture.",
+    demo: "https://tp-chatapp.vercel.app/",
+    github: null,
   },
   {
     title: "DigitalBank landing page",
