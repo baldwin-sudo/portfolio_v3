@@ -1,4 +1,5 @@
 import React, { forwardRef } from "react";
+import { motion } from "framer-motion";
 import githubIco from "../assets/github-icon.png";
 import linkIco from "../assets//link-icon.png";
 
@@ -20,14 +21,14 @@ const About = forwardRef((props, ref) => {
       >
         <div className="self-center w-fit mx-auto   ">
           <h1 className=" text-neutral-50  text-xl text-center sm:text-4xl lg:text-5xl font-semibold ">
-            Baldwin-sudo's Portfolio{" "}
+            Hi, I'm El Mehdi Kasmi 
           </h1>
 
           <div className="mb-10 w-full sm:w-auto flex justify-start sm:justify-center">
             <div className="text-center text-neutral-300 text-sm sm:text-xl lg:text-2xl font-medium whitespace-nowrap overflow-hidden text-ellipsis">
               <TyperWriterEffect
                 pause={1750}
-                text="Software Developer & Machine Learning Engineer"
+                text="Software Developer & AI Engineer"
               />
             </div>
           </div>
@@ -40,33 +41,40 @@ const About = forwardRef((props, ref) => {
         </div>{" "}
       </div>
       {/* contact buttons */}
-      <div
-        className="fixed top-100 left-0 translate-y-50 lg:translate-y-0 lg:top-0 z-50 flex  gap-2
-                bg-neutral-900/90 backdrop-blur-md   shadow-lg rounded-br-full rounded-tr-full p-2 pr-4 sm:p-6 sm:pr-8 hover:bg-green-400  "
+      <motion.div
+        initial={{ x: "100vw", y: "100vh", opacity: 0 }}
+        animate={{ x: 0, y: 0, opacity: 1,duration: 2 }}
+        transition={{ type: "spring", stiffness: 100, damping: 12 }}
+        className="fixed top-6  lg:top-6 left-0 z-50 flex gap-2 bg-neutral-900/90 backdrop-blur-md shadow-lg rounded-br-full border-2 border-white/90 rounded-tr-full p-2 pr-4 sm:p-6 sm:pr-8"
       >
-        <a
-          href="https://github.com/baldwin-sudo"
-          target="_blank"
-          className="h-fit   flex  items-center justify-center gap-1    hover:opacity-80 text-white text-sm sm:text-lg cursor-pointer "
+        <motion.div
+          animate={{ y: [0, -6, 0] }}
+          transition={{ duration: 4, repeat: 0, ease: "easeInOut" }}
+          className="flex gap-2"
         >
-          {" "}
-          <img className=" w-6 h-6 sm:w-6 sm:h-6" src={githubIco} alt="" />
-          <span className="hidden ">Github</span>
-        </a>
+          <motion.a
+            href="https://github.com/baldwin-sudo"
+            target="_blank"
+            className="h-fit flex items-center justify-center gap-1 transform transition-all duration-200 hover:scale-110 hover:opacity-90 text-white text-sm sm:text-lg cursor-pointer"
+            animate={{ scale: [1, 1.03, 1] }}
+            transition={{ duration: 2.2, repeat: 0, ease: "easeInOut", repeatType: "reverse" }}
+          >
+            <motion.img className="w-6 h-6 sm:w-6 sm:h-6" src={githubIco} alt="" />
+            <span className="hidden">Github</span>
+          </motion.a>
 
-        <a
-          href="https://www.linkedin.com/in/el-mehdi-kasmi-04ab45231/"
-          target="_blank"
-          className=" h-fit   flex  items-center justify-center gap-1    hover:opacity-80 text-white text-sm sm:text-lg cursor-pointer "
-        >
-          <img
-            className="z-1 w-6 h-6 sm:w-6 sm:h-6"
-            src={linkdedinIco}
-            alt=""
-          />
-          <p className="hidden">Linkedin</p>
-        </a>
-      </div>
+          <motion.a
+            href="https://www.linkedin.com/in/el-mehdi-kasmi-04ab45231/"
+            target="_blank"
+            className="h-fit flex items-center justify-center gap-1 transform transition-all duration-200 hover:scale-110 hover:opacity-90 text-white text-sm sm:text-lg cursor-pointer"
+            animate={{ scale: [1, 1.03, 1] }}
+            transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }}
+          >
+            <motion.img className="z-1 w-6 h-6 sm:w-6 sm:h-6" src={linkdedinIco} alt="" />
+            <p className="hidden">Linkedin</p>
+          </motion.a>
+        </motion.div>
+      </motion.div>
     </div>
   );
 });
