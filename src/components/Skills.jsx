@@ -9,11 +9,9 @@ const Skills = forwardRef((props, ref) => {
     "tailwindcss",
     "js",
     "reactjs",
-    "nextjs",
-    "java",
-    "spring",
+  
     "go",
-
+"c++",,
     "git",
     "postman",
     "python",

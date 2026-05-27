@@ -97,7 +97,7 @@ export default function ParticlesBackground() {
 
   if (init) {
     return (
-      <div className="z-1 absolute inset-0 pointer-events-none">
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <Particles
           className=""
           id="tsparticles"

@@ -3,6 +3,14 @@ import ExperienceCard from "./ExperienceCard";
 
 const Experience = forwardRef((props, ref) => {
   const experiences = [
+     {
+      role: "End of studies internship ",
+      place:
+        "Dassault Systémes  (France)",
+      date: "April 2026 - September 2026",
+      description:
+        " Built ReAct-based AI agents with LangChain & MCP protocol to automate CAD workflows on the 3DEXPERIENCE platform.Leveraged knowledge graphs and ontologies to improve LLM response consistency and reduce hallucinations.Collaborated with cross-functional engineering teams to integrate AI modules into enterprise-grade CAD pipelines, ensuring scalability and maintainability",
+    },
     {
       role: "Internship ",
       place:

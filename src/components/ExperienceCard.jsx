@@ -19,13 +19,13 @@ export default function ExperienceCard({ experience, index }) {
         transition={{ type: "spring", stiffness: 250, damping: 15 }}
         className="bg-neutral-50 hover:bg-neutral-200    flex flex-col gap-3 w-fit  max-w-250 rounded-lg p-8 "
       >
-        <h1 className="text-neutral-600 text-2xl sm:text-4xl">
+        <h1 className="text-neutral-600 text-xl sm:text-2xl">
           {experience.role}
         </h1>
-        <p className="text-neutral-400 text-lg sm:text-xl">
+        <p className="text-neutral-400 text-sm sm:text-lg">
           {experience.place}
         </p>
-        <p className="text-neutral-500 text-sm sm:text-lg">
+        <p className="text-neutral-500 text-xs sm:text-sm">
           {experience.description}
         </p>
         <p className="text-neutral-500">{experience.date}</p>

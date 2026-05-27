@@ -10,72 +10,29 @@ import chatApp from "../assets/chat-app.png";
 // fullstack:1
 // ai and ml :2
 const projects = [
-  {
-    title: "Luxurious Clothing",
-    tech: ["reactjs", "tailwindcss"],
-    state: "finished",
-    img: luxurious,
-    type: 0,
-    description:
-      "Luxury clothes shop , developped using React js , and fakeStore Api for the data , deployed using netlify .",
-    demo: "https://eluxury.netlify.app/",
-    github: "https://github.com/baldwin-sudo/eluxury",
-  },
-  {
-    title: "Car Sales Dashboard",
-    tech: ["nextjs", "postgresql", "tailwindcss"],
-    state: "finished",
-    img: car_sales,
-    type: 1,
-    description:
-      "A Car sales Dashboard made to get different Insights from the data , made using Next js 15  (React Server Components ,Server Actions , Streaming)  and Postgresql.",
-    demo: null,
-    github: "https://github.com/baldwin-sudo/car_sales_dashboard",
-  },
-  {
-    title: "Real time chat app",
-    tech: ["reactjs", "postgresql", "redis", "tailwindcss"],
-    state: "finished",
-    img: chatApp,
-    type: 1,
-    description:
-      "Built a real-time chat application with secure authentication, private and group messaging, and a serverless backend architecture.",
-    demo: "https://tp-chatapp.vercel.app/",
-    github: null,
-  },
-  {
-    title: "DigitalBank landing page",
-    tech: ["reactjs", "tailwindcss"],
-    img: digitalbank,
-    state: "on going ...",
-    type: 0,
-    description: "A responsive Landing page for  DigitalBank",
-    demo: "https://digitalbank-landing.netlify.app/",
-    github: "https://github.com/baldwin-sudo/digitalbank-landing",
-  },
-  {
-    title: "Translated.io",
-    tech: ["reactjs", "tailwindcss"],
-    state: "finished",
-    img: translated,
-    type: 0,
-    description: "A web interface leveraging mymemory API to translate text. ",
-    demo: "https://translated-io.netlify.app/",
-    github: "https://github.com/baldwin-sudo/translated.io",
-  },
-
-  {
-    title: "PassKeeper",
-    state: "on going ...",
-    tech: ["reactjs", "go", "mysql"],
+   {
+    title: "Distributed LLM training on AWS ",
+    tech: ["python", "pytorch","terraform", "amazonaws", "docker"],
     img: null,
-    type: 1,
-
+    state: "finished",
+    type: 2,
     description:
-      "My own passwords manager , built using React js , Golang and Sqlite .(on going developement)",
+      "Distributed DistilBERT training pipeline on AWS using PyTorch DDP, TorchElastic, Docker, and Terraform. Built a local multi-node simulation environment with Docker Compose to validate distributed orchestration, networking, checkpointing, and fault tolerance before deploying production infrastructure on AWS with Terraform.",
     demo: null,
-    github: "https://github.com/baldwin-sudo/PassKeeper",
+    github: "https://github.com/baldwin-sudo/distributed-training",
   },
+     {
+    title: "Agentic Resume Enhancement System",
+    tech: ["python", "langchain", "qdrant", "docker"],
+    img: null,
+    state: "finished",
+    type: 2,
+    description:
+      "Built an agentic system using Langchain where agents are capable of analyzing job offers , enhancing my resume and generating cover letters .",
+    demo: null,
+    github: "https://github.com/baldwin-sudo/resume-ai-agent",
+  },
+ 
   {
     title: "Rag based Chatbot",
     tech: ["python", "elastic", "openai", "streamlit"],

@@ -1,10 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import "../App.css";
 import githubIco from "../assets/github-icon.png";
 import linkIco from "../assets//link-icon.png";
-import StackIcon from "tech-stack-icons";
-import { motion, useInView } from "framer-motion";
-import { div } from "framer-motion/client";
+import { motion } from "framer-motion";
 import clsx from "clsx";
 export default function ProjectCard({ project }) {
   const stateColors = {
@@ -14,9 +12,9 @@ export default function ProjectCard({ project }) {
       border: "border-yellow-500",
     },
     finished: {
-      bg: "bg-green-200",
-      text: "text-green-600",
-      border: "border-green-500",
+      bg: "bg-emerald-50",
+      text: "text-emerald-700",
+      border: "border-emerald-200",
     },
     archived: {
       bg: "bg-gray-200",
@@ -25,82 +23,98 @@ export default function ProjectCard({ project }) {
     },
   };
 
-  const ref = useRef(null);
-  const inView = useInView(ref, {
-    triggerOnce: false,
-    threshold: 0.8,
-  });
   const { title, tech, github, demo, description, img, state } = project;
   return (
-    <div className="project-card-overlay relative shadow-lg bg-white hover:shadow-xl  p-4  pt-0 lg:p-8 rounded-lg  border-1 border-l-4 border-l-gray-500 border-neutral-50 transition-all duration-100 ">
-      <div
-        className={clsx(
-          "w-fit self-end justify-self-end ml-auto lg:ml-auto m-2  opacity-70 right-0 px-3 py-1.5 rounded-lg text-xs lg:text-sm font-light sm:font-medium z-50 capitalize   border-2",
-          stateColors[state].bg,
-          stateColors[state].text,
-          stateColors[state].border
-        )}
-      >
-        {state}
-      </div>
-      <motion.div
-        className="  flex  w-fit sm:w-150 lg:w-225 xl:w-250  "
-        initial={{ scale: 0.95, opacity: 0.6 }}
-        viewport={{ once: false, amount: 0.8 }} // Triggers when 30% of the div is visible
-        animate={
-          inView ? { scale: 1.0, opacity: 1 } : { scale: 0.8, opacity: 0.6 }
-        }
-        transition={{ type: "spring", stiffness: 150, damping: 15 }}
-      >
-        <div ref={ref} className="flex flex-col gap-5 w-full lg:w-150 ">
-          <h1 className="text-xl text-gray-600 font-semibold">{title}</h1>
-          <div className="flex items-center gap-1">
-            <span className="font-medium  text-gray-500">Made with :</span>{" "}
-            {tech.map((t, index) => {
-              return (
-                <p key={index} className="inline">
-                  {<StackIcon name={t} className="size-10 lg:size-12" /> || (
-                    <p className="text-black">{t}</p>
-                  )}
-                </p>
-              );
-            })}
+    <motion.article
+      className="group h-full overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.25 }}
+      transition={{ type: "spring", stiffness: 120, damping: 16 }}
+    >
+      <div className="flex h-full flex-col">
+        <div className="h-1.5 w-full bg-gradient-to-r from-green-500 via-emerald-400 to-lime-400" />
+
+        {img != null ? (
+          <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100">
+            <img
+              src={img}
+              alt={title}
+              className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+            <div
+              className={clsx(
+                "absolute left-4 top-4 inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold capitalize backdrop-blur-sm",
+                stateColors[state].bg,
+                stateColors[state].text,
+                stateColors[state].border
+              )}
+            >
+              {state}
+            </div>
           </div>
-          <p className="text-lg z-10 text-neutral-500">{description}</p>
-          <div className="flex gap-10 mt-5 z-20">
+        ) : (
+          <div className="flex items-center justify-between gap-3 px-5 pt-5">
+            <div
+              className={clsx(
+                "inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold capitalize",
+                stateColors[state].bg,
+                stateColors[state].text,
+                stateColors[state].border
+              )}
+            >
+              {state}
+            </div>
+          </div>
+        )}
+
+        <div className="flex h-full flex-col gap-4 p-5 sm:p-6">
+          <div className="space-y-4">
+            <h1 className="text-xl sm:text-2xl font-semibold leading-tight text-gray-800 break-words">
+              {title}
+            </h1>
+
+            <p className="text-sm sm:text-[15px] leading-6 text-gray-600 break-words">
+              {description}
+            </p>
+
+            <div className="flex flex-wrap gap-2">
+              {tech.map((t, index) => (
+                <span
+                  key={index}
+                  className="rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1 text-xs font-medium capitalize text-gray-700"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-auto flex flex-wrap gap-3 pt-2">
             {github && (
               <a
                 href={github}
                 target="_blank"
-                className="w-30 lg:w-35 flex  items-center justify-center gap-1 border-2 rounded-full px-4 sm:px-6 py-3 bg-white hover:opacity-80 text-lg sm:text-xl border-neutral-600 cursor-pointer "
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200/80"
               >
-                {" "}
-                <img className="w-6 h-6" src={githubIco} alt="" />
-                <span className="text-gray-600">Github</span>
+                <img className="h-5 w-5" src={githubIco} alt="" />
+                Github
               </a>
             )}
             {demo && (
               <a
                 href={demo}
                 target="_blank"
-                className="w-30 lg:w-35  flex  items-center justify-center gap-1  rounded-full px-4 sm:px-6 py-3 bg-neutral-600 hover:opacity-80 text-white text-lg sm:text-xl cursor-pointer "
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gray-800 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-gray-700"
               >
-                <img className="z-1 w-6 h-6" src={linkIco} alt="" />
-                <p>Live</p>
+                <img className="h-5 w-5" src={linkIco} alt="" />
+                Live
               </a>
             )}
           </div>
-        </div>{" "}
-        {img != null ? (
-          <div className="z-20 relative self-end   lg:w-250 xl:w-300 h-0 lg:h-70 xl:h-80 overflow-clip ">
-            <img
-              src={img}
-              alt="project img"
-              className="z-10 hidden absolute -right-5 bottom-0  lg:block lg:h-70 xl:h-80 w-350    rounded-md  border-1 border-b-0 border-neutral-300 "
-            />
-          </div>
-        ) : null}
-      </motion.div>
-    </div>
+        </div>
+      </div>
+    </motion.article>
   );
 }
